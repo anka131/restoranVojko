@@ -1,0 +1,36 @@
+@import "vars.scss";
+
+header{
+    .container{
+        z-index: 999999;
+        max-width: 1500px;
+        img{
+            z-index: 999999;
+            width: 126px;
+            height: 78px;
+            opacity: 100%;
+        }
+    }
+
+}
+
+.hero{
+background-image:linear-gradient(rgba( 0, 0, 0, 0.6), rgba(7, 7, 7, 0.1)), url("img/home-hero.jpg");
+width: 1911px;
+height: 950px;
+position: absolute;
+top: 0px;
+left: 0px;
+
+// width: 1911px;
+// height: 950px;
+// opacity: 0.74;
+   
+    .text-container{
+        z-index: 999999;
+        position: absolute;
+        top: 484px;
+        left: 599px;
+
+    }
+}
