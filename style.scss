@@ -1,36 +1,46 @@
 @import "vars.scss";
+@import "mixins.scss";
+@import "globals.scss";
 
 header{
-    .container{
-        z-index: 999999;
-        max-width: 1500px;
-        img{
+        .container{
             z-index: 999999;
-            width: 126px;
-            height: 78px;
-            opacity: 100%;
+            max-width: 1500px;
+            
+            img{
+                z-index: 999999;
+                width: 126px;
+                height: 78px;
+                opacity: 100%;
+            }
         }
-    }
+    
+
 
 }
 
 .hero{
 background-image:linear-gradient(rgba( 0, 0, 0, 0.6), rgba(7, 7, 7, 0.1)), url("img/home-hero.jpg");
-width: 1911px;
+width: 1908px;
 height: 950px;
 position: absolute;
 top: 0px;
 left: 0px;
-
-// width: 1911px;
-// height: 950px;
-// opacity: 0.74;
-   
+@include flex;
     .text-container{
-        z-index: 999999;
-        position: absolute;
-        top: 484px;
-        left: 599px;
+        max-width: 1015px;
+        @include flex;
+        text-align: center;
+        color: $white;
+        h1{
+            font-family: $fontSecond;
+            font-size: 89px;
+        }
+        p{
+            
+            font-size: 22px;
+            font-family: $fontFamily;
+        }
 
     }
 }
