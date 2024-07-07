@@ -1,6 +1,10 @@
 @import "vars.scss";
 @import "mixins.scss";
 @import "globals.scss";
+a{
+    text-decoration: none;
+     color: white;
+}
 
 header{
         .container{
@@ -20,7 +24,7 @@ header{
 }
 
 .hero{
-background-image:linear-gradient(rgba( 0, 0, 0, 0.6), rgba(7, 7, 7, 0.1)), url("img/home-hero.jpg");
+
 width: 1908px;
 height: 950px;
 position: absolute;

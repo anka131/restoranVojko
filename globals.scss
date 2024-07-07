@@ -21,10 +21,14 @@ body {
 
 ul {
     list-style: none;
+li{
+    a{
+        text-decoration: none;
+        color: $white;
+    }
 }
-a{
-    text-decoration: none;
-    color: $white;
+
+
 }
 
 button{
