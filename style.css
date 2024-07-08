@@ -1,27 +1,79 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
-header .container {
-  z-index: 999999;
-  max-width: 1500px;
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
-header .container img {
+
+h2 {
+  font-size: 80px !important;
+  color: rgb(10, 30, 85) !important;
+  font-family: "Great Vibes", cursive;
+  margin-bottom: 80px !important;
+}
+
+header {
+  font-family: "Monsterrat", sans-serif;
+  font-size: 18px;
+}
+header img {
+  position: relative;
+  top: 0;
+  width: 1902px;
+  height: 950px;
+}
+@media (max-width: 430px) {
+  header img {
+    width: 100%;
+    height: 800px;
+  }
+}
+@media (max-width: 868px) {
+  header img {
+    width: 100%;
+  }
+}
+header nav {
+  position: relative;
+  top: -950px;
+}
+@media (max-width: 430px) {
+  header nav {
+    top: -810px;
+    z-index: 9999;
+  }
+}
+header nav .container {
   z-index: 999999;
+  margin-top: 15px;
+}
+header nav .container img {
   width: 126px;
   height: 78px;
   opacity: 100%;
 }
 
 .hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(7, 7, 7, 0.1)), url("img/home-hero.jpg");
-  width: 1908px;
-  height: 950px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+  position: relative;
+  top: -700px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+}
+@media (max-width: 430px) {
+  .hero {
+    top: -720px;
+    z-index: 9999;
+  }
 }
 .hero .text-container {
   max-width: 1015px;
@@ -36,7 +88,347 @@ header .container img {
   font-family: "Great Vibes", cursive;
   font-size: 89px;
 }
+@media (max-width: 430px) {
+  .hero .text-container h1 {
+    font-size: 60px;
+  }
+}
 .hero .text-container p {
   font-size: 22px;
   font-family: "Monsterrat", sans-serif;
+}
+
+.welcome {
+  max-width: 1600px;
+  margin: -70px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+@media (max-width: 430px) {
+  .welcome {
+    max-width: 100%;
+    text-align: left;
+  }
+}
+@media (max-width: 868px) {
+  .welcome {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 430px) {
+  .welcome .row {
+    max-width: 100%;
+  }
+}
+@media (max-width: 868px) {
+  .welcome .row {
+    max-width: 100%;
+  }
+}
+.welcome .row .slike {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  left: 30px;
+}
+@media (max-width: 430px) {
+  .welcome .row .slike {
+    margin: 0;
+    max-width: 100%;
+    position: relative;
+    left: -10px;
+  }
+}
+@media (max-width: 868px) {
+  .welcome .row .slike {
+    margin: 0;
+    max-width: 100%;
+    position: relative;
+    left: -20px;
+  }
+}
+.welcome .row .slike .slika2 {
+  position: relative;
+  left: 20px;
+  top: 80px;
+}
+@media (max-width: 430px) {
+  .welcome .row .slike .slika2 {
+    margin-bottom: 150px;
+    max-width: 100%;
+    position: relative;
+    left: 0;
+  }
+}
+@media (max-width: 868px) {
+  .welcome .row .slike .slika2 {
+    margin-bottom: 150px;
+    max-width: 100%;
+  }
+}
+.welcome .row .txt {
+  position: relative;
+  right: 40px;
+  margin-bottom: 20px;
+}
+@media (max-width: 430px) {
+  .welcome .row .txt {
+    font-size: 12px;
+    text-align: left;
+  }
+}
+@media (max-width: 430px) {
+  .welcome .row .txt h2 {
+    text-align: center;
+    margin-left: 65px;
+    position: absolute;
+    top: -1400px;
+  }
+}
+.welcome .row .txt p {
+  font-family: "Monsterrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@media (max-width: 430px) {
+  .welcome .row .txt p {
+    font-size: 1.2rem;
+    text-align: left;
+    position: relative;
+    left: 0px;
+  }
+}
+.welcome .row .txt .dugmici {
+  display: flex;
+  margin-top: 50px;
+  position: relative;
+  right: 20px;
+}
+@media (max-width: 430px) {
+  .welcome .row .txt .dugmici {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 250px;
+  }
+}
+@media (max-width: 868px) {
+  .welcome .row .txt .dugmici {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+  }
+}
+.welcome .row .txt .dugmici button {
+  margin: 0 2px 0 30px;
+  padding: 10px 20px !important;
+  font-family: "Monsterrat", sans-serif;
+  font-weight: 500;
+  padding: 10px 50px;
+  margin: 0px 50px;
+  background-color: rgb(10, 30, 85);
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 430px) {
+  .welcome .row .txt .dugmici button {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 868px) {
+  .welcome .row .txt .dugmici button {
+    margin-bottom: 30px;
+  }
+}
+
+.blog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  max-width: 1600px;
+  margin: 332px auto;
+}
+@media (max-width: 868px) {
+  .blog {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+  }
+}
+@media (max-width: 430px) {
+  .blog {
+    margin-top: 200px;
+  }
+}
+@media (max-width: 430px) {
+  .blog .row {
+    max-width: 100%;
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
+@media (max-width: 868px) {
+  .blog .row {
+    max-width: 100%;
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
+@media (max-width: 430px) {
+  .blog .row article {
+    max-width: 100%;
+  }
+}
+@media (max-width: 868px) {
+  .blog .row article {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
+.blog .row article img {
+  width: 496px;
+  height: 204px;
+}
+@media (max-width: 430px) {
+  .blog .row article img {
+    max-width: 100%;
+  }
+}
+@media (max-width: 868px) {
+  .blog .row article img {
+    max-width: 100%;
+  }
+}
+.blog .row article p {
+  padding-top: 15px;
+  font-family: "Kanit", sans-serif;
+}
+.blog .row article p:first-of-type {
+  color: rgb(200, 48, 47);
+}
+.blog .row article p:last-of-type {
+  margin-bottom: 52px;
+}
+.blog .row article h5 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+}
+.blog .row article hr {
+  margin-top: 10px;
+  position: relative;
+  left: 12px;
+  width: 320px;
+  border: 1px solid rgb(112, 112, 112);
+  opacity: 0.5;
+}
+.blog .row article button {
+  position: relative;
+  left: 110px;
+  font-family: "Monsterrat", sans-serif;
+  font-weight: 500;
+  padding: 10px 50px;
+  margin: 0px 50px;
+  background-color: rgb(10, 30, 85);
+  color: white;
+  text-decoration: none;
+}
+.blog div {
+  margin-top: 55px;
+  padding: 10px 15px;
+}
+.blog div .sec {
+  font-family: "Monsterrat", sans-serif;
+  font-weight: 500;
+  padding: 10px 50px;
+  margin: 0px 50px;
+  background-color: rgb(10, 30, 85);
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 430px) {
+  .blog div .sec {
+    margin-top: 80px;
+    margin-left: 150px;
+  }
+}
+@media (max-width: 868px) {
+  .blog div .sec {
+    margin-top: 80px;
+  }
+}
+.blog h2 {
+  text-align: center;
+}
+
+footer {
+  background-image: url("img/footer-bg.png");
+  padding: 50px 0;
+}
+@media (max-width: 430px) {
+  footer {
+    max-width: 100%;
+  }
+}
+@media (max-width: 868px) {
+  footer {
+    min-width: 100%;
+  }
+}
+footer h2 {
+  color: white !important;
+  text-align: center;
+  margin-top: 50px !important;
+}
+footer .container {
+  max-width: 1600px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .container .text img {
+  width: 280px;
+  height: 165px;
+}
+footer .container .text p {
+  font-family: "Monsterrat", sans-serif;
+  color: white;
+}
+footer .container .text p:first-of-type {
+  margin-top: 40px;
+}
+footer .container .forma form {
+  font-family: "Monsterrat", sans-serif;
+  font-size: 14px;
+}
+footer .container .forma form label {
+  color: white;
+}
+footer .container .forma form input, footer .container .forma form textarea {
+  background-color: #fff;
+  opacity: 58%;
+  border-radius: 0 !important;
+}
+footer .container .forma a {
+  font-family: "Monsterrat", sans-serif;
+  font-weight: 500;
+  padding: 10px 50px;
+  margin: 0px 50px;
+  background-color: rgb(10, 30, 85);
+  color: white;
+  text-decoration: none;
+  background-color: rgb(200, 48, 47);
+  margin-top: 38px;
+  text-align: center;
+  position: relative;
+  left: 125px;
+  border-radius: 0 !important;
 }/*# sourceMappingURL=style.css.map */

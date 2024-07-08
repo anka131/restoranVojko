@@ -1,50 +1,334 @@
+@import "globals.scss";
 @import "vars.scss";
 @import "mixins.scss";
-@import "globals.scss";
-a{
-    text-decoration: none;
-     color: white;
-}
 
-header{
-        .container{
-            z-index: 999999;
-            max-width: 1500px;
-            
-            img{
-                z-index: 999999;
-                width: 126px;
-                height: 78px;
-                opacity: 100%;
-            }
-        }
-    
-
-
-}
-
-.hero{
-
-width: 1908px;
-height: 950px;
-position: absolute;
-top: 0px;
-left: 0px;
-@include flex;
-    .text-container{
-        max-width: 1015px;
-        @include flex;
-        text-align: center;
-        color: $white;
-        h1{
-            font-family: $fontSecond;
-            font-size: 89px;
-        }
-        p{
-            
-            font-size: 22px;
-            font-family: $fontFamily;
-        }
-
+header {
+  img {
+    position: relative;
+    top: 0;
+    width: 1902px;
+    height: 950px;
+    @include responsive(mobilni) {
+      width: 100%;                 
+      height: 800px;
     }
+    @include responsive(tablet) {
+      width: 100%;
+    //   height: 800px;
+    }
+  }
+  font-family: $fontFamily;
+  font-size: 18px;
+  nav {
+    position: relative;
+    top: -950px;
+    @include responsive(mobilni) {
+      top: -810px;
+      z-index: 9999;
+    }
+    .container {
+      z-index: 999999;
+      margin-top: 15px;
+      img {
+        width: 126px;
+        height: 78px;
+        opacity: 100%;
+      }
+    }
+  }
+}
+
+.hero {
+  position: relative;
+  top: -700px;
+  @include flex;
+  @include responsive(mobilni) {
+    top: -720px;
+    z-index: 9999;
+  }
+  .text-container {
+    max-width: 1015px;
+    @include flex;
+    text-align: center;
+    color: $white;
+    h1 {
+      font-family: $fontSecond;
+      font-size: 89px;
+      @include responsive(mobilni) {
+        font-size: 60px;
+      }
+    }
+    p {
+      font-size: 22px;
+      font-family: $fontFamily;
+    }
+  }
+}
+
+.welcome {
+  max-width: 1600px;
+  margin: -70px auto;
+  @include flex;
+  @include responsive(mobilni) {
+    max-width: 100%;
+    text-align: left;
+  }
+  @include responsive(tablet) {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .row{
+    @include responsive(mobilni) {
+        max-width: 100%;
+      }
+      @include responsive(tablet) {
+        max-width: 100%;
+      }
+
+    .slike {
+        @include flex;
+        position: relative;
+        left: 30px;
+        @include responsive(mobilni) {
+            margin: 0;
+            max-width: 100%;
+            position: relative;
+            left: -10px;
+          }
+          @include responsive(tablet) {
+            margin: 0;
+            max-width: 100%;
+            position: relative;
+            left: -20px;
+          }
+    
+        .slika2 {
+          position: relative;
+          left: 20px;
+          top: 80px;
+    
+          @include responsive(mobilni) {
+            margin-bottom: 150px;
+            max-width: 100%;
+            position: relative;
+            left: 0;
+          }
+          @include responsive(tablet) {
+            margin-bottom: 150px;
+            max-width: 100%;
+          }
+        }
+      }
+      .txt {
+        position: relative;
+        right: 40px;
+        margin-bottom: 20px;
+        @include responsive(mobilni) {
+            font-size: 12px;
+            text-align: left;
+            // // l
+          }
+        h2 {
+          @include responsive(mobilni) {
+            text-align: center;
+            margin-left: 65px;
+            position: absolute;
+            top: -1400px;
+          }
+        }
+        p {
+          font-family: $fontFamily;
+          font-size: 1rem;
+          line-height: 1.5;
+          @include responsive(mobilni) {
+            font-size: 1.2rem;
+            text-align: left;
+            position: relative;
+            left: 0px;
+          }
+        }
+        .dugmici {
+          display: flex;
+          margin-top: 50px;
+          position: relative;
+          right: 20px;
+          @include responsive(mobilni) {
+            flex-direction: column;
+            align-items: center;
+            margin-left: 250px;
+          }
+          @include responsive(tablet) {
+            flex-direction: column;
+            align-items: center;
+            margin-left: 100px;
+          }
+          button {
+            margin: 0 2px 0 30px;
+            padding: 10px 20px !important;
+            @include dugme;
+            @include responsive(mobilni) {
+              margin-bottom: 30px;
+            }
+            @include responsive(tablet) {
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+  }
+ 
+}
+
+.blog {
+  @include flex;
+  @include responsive(tablet) {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+  }
+  @include responsive(mobilni) {
+    margin-top: 200px;
+  }
+  .row {
+    @include responsive(mobilni) {
+        max-width: 100%;
+      flex-direction: column;
+      align-items: baseline;
+    }
+    @include responsive(tablet) {
+        max-width: 100%;
+      flex-direction: column;
+      align-items: baseline;
+    }
+    article {
+      @include responsive(mobilni) {
+        max-width: 100%;
+      }
+      @include responsive(tablet) {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+      img {
+        width: 496px;
+        height: 204px;
+        @include responsive(mobilni) {
+          max-width: 100%;
+        }
+        @include responsive(tablet) {
+          max-width: 100%;
+        }
+      }
+      p {
+        padding-top: 15px;
+        font-family: $fontThird;
+        &:first-of-type {
+          color: $date;
+        }
+        &:last-of-type {
+          margin-bottom: 52px;
+        }
+      }
+      h5 {
+        font-family: $fontThird;
+        font-weight: 500;
+      }
+      hr {
+        margin-top: 10px;
+        position: relative;
+        left: 12px;
+        width: 320px;
+        border: 1px solid rgba(112, 112, 112, 1);
+        opacity: 0.5;
+      }
+      button {
+        position: relative;
+        left: 110px;
+        @include dugme;
+      }
+    }
+  }
+  div{
+    margin-top: 55px;
+    padding: 10px 15px;
+    .sec {
+
+        @include responsive(mobilni) {
+          margin-top: 80px;
+          margin-left: 150px;
+        }
+        @include responsive(tablet) {
+          margin-top: 80px;
+        }
+        @include dugme;
+    
+      }
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  max-width: 1600px;
+  margin: 332px auto;
+}
+
+footer {
+  background-image: url("img/footer-bg.png");
+  padding: 50px 0;
+  @include responsive(mobilni) {
+    max-width: 100%;
+  }
+  @include responsive(tablet) {
+    min-width: 100%;
+  }
+  h2 {
+    color: $white !important;
+    text-align: center;
+    margin-top: 50px !important;
+  }
+  .container {
+    max-width: 1600px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .text {
+      img {
+        width: 280px;
+        height: 165px;
+      }
+      p {
+        font-family: $fontFamily;
+        color: $white;
+        &:first-of-type {
+          margin-top: 40px;
+        }
+      }
+    }
+    .forma {
+      form {
+        font-family: $fontFamily;
+        font-size: 14px;
+        label {
+          color: $white;
+        }
+        input, textarea {
+          background-color: #fff;
+          opacity: 58%;
+          border-radius: 0 !important;
+        }
+      }
+      a {
+        @include dugme;
+        background-color: $date;
+        margin-top: 38px;
+        text-align: center;
+        position: relative;
+        left: 125px;
+        border-radius: 0 !important;
+      }
+    }
+  }
 }

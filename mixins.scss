@@ -1,6 +1,31 @@
+@import "vars.scss";
+
 @mixin flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content:center;
       }
+
+@mixin dugme{
+  font-family: $fontFamily;
+  font-weight: 500;
+  padding: 10px 50px;
+  margin: 0px 50px;
+  background-color: $headers;
+  color: $white;
+  text-decoration: none;
+} 
+
+@mixin responsive($uredjaj){
+  @if $uredjaj == tablet{
+      @media(max-width:868px){
+          @content;
+      }
+  }
+  @if $uredjaj == mobilni{
+      @media(max-width:430px){
+          @content;
+      }
+  }
+}
