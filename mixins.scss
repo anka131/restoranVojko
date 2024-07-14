@@ -24,7 +24,7 @@
       }
   }
   @if $uredjaj == mobilni{
-      @media(max-width:430px){
+      @media(max-width: 430px){
           @content;
       }
   }

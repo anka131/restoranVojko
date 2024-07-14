@@ -3,26 +3,43 @@
 @import "mixins.scss";
 
 header {
-  img {
+  .banner-wrapper {
     position: relative;
-    top: 0;
-    width: 1902px;
-    height: 950px;
-    @include responsive(mobilni) {
-      width: 100%;                 
-      height: 800px;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        @include responsive(mobilni) {
+              max-width: 100%;                 
+              height: 800px;
+            }
+            @include responsive(tablet) {
+              width: 100%;
+              height: 800px;
+            }
     }
-    @include responsive(tablet) {
-      width: 100%;
-    //   height: 800px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        z-index: 1;
+        opacity: 74%;
     }
-  }
+}
   font-family: $fontFamily;
   font-size: 18px;
   nav {
     position: relative;
-    top: -950px;
+    top: -1050px;
     @include responsive(mobilni) {
+      top: -810px;
+      z-index: 9999;
+    }
+    @include responsive(tablet) {
       top: -810px;
       z-index: 9999;
     }
@@ -39,15 +56,16 @@ header {
 }
 
 .hero {
+  z-index: 1;
   position: relative;
-  top: -700px;
+  top: -720px;
   @include flex;
   @include responsive(mobilni) {
     top: -720px;
     z-index: 9999;
   }
   .text-container {
-    max-width: 1015px;
+    max-width: 1010px;
     @include flex;
     text-align: center;
     color: $white;
@@ -330,5 +348,198 @@ footer {
         border-radius: 0 !important;
       }
     }
+  }
+}
+
+// Restoran page
+
+.about{
+  margin: auto;
+  max-width: 1600px;
+  @include responsive(mobilni){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    }
+  @include responsive(tablet) {
+    max-width: 100%;
+  }
+  
+  article{
+    @include responsive(mobilni){
+      max-width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    @include responsive(tablet){
+      max-width: 100%;
+      display: flex;
+      flex-direction: column-reverse ;
+    }
+    .slika{
+      @include responsive(tablet) {
+        max-width: 100%;
+        position: relative;
+        top: 120px;
+        left: -35px;
+      }
+      @include responsive(mobilni){
+        max-width: 100%;
+        margin: 0 !important;
+        position: relative;
+        top: 0;
+        left: -6px;
+      }
+      img{
+        @include responsive(mobilni){
+          max-width: 100%;
+          margin: 0 !important;
+          position: relative;
+          top: 220px;
+          right: -3px;
+        }
+         @include responsive(tablet){
+          max-width: 100%;
+        }
+      }
+    }
+    
+    .text{
+      p{
+        font-family: $fontFamily;
+        font-size: 15px;
+        @include responsive (mobilni) {
+          margin-top: -20px;
+        }
+        @include responsive (tablet) {
+          margin-left: 15px;
+        }
+      }
+      width: 730px;
+      height: 250px;
+      margin-top: 30px;
+      h2{
+        @include responsive (mobilni) {
+          position: relative;
+          top: -350px;
+        }
+        @include responsive (tablet) {
+          position:relative;
+          top: -350px;
+        }
+      }
+    }
+
+    &:last-of-type{
+      @include responsive(tablet) {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        position: relative;
+        left: 0px;
+      }
+      @include responsive(mobilni){
+        max-width: 400px;
+        margin: 0;
+        position: relative;
+        left: 2px;
+        top: 300px;
+        display: flex;
+        flex-direction: column-reverse;
+        }
+      position: relative;
+      left: -130px;
+      margin-top: 90px;
+
+      .text{
+        margin-top: 150px;
+        margin-left: -30px;
+        @include responsive(tablet) {
+          max-width: 100%;
+          position: relative;
+          top: 20px;
+        }
+        @include responsive(mobilni){
+          width: 100%;
+           margin: 0 auto 200px;
+           position: relative;
+          top: 100px;
+          }
+      }
+      display: flex;
+      flex-direction: row-reverse;
+      .slike{
+        @include responsive(tablet) {
+          max-width: 100%;
+          display:  flex;
+          margin-top: 20px;
+        }
+        @include responsive(mobilni){
+          display: flex;
+          flex-direction: column;
+        }
+        img{
+
+          @include responsive(mobilni){
+            margin-left: -10px;
+          }
+          max-width: 350px; 
+          margin-left: 8px;
+          &:last-of-type{
+            position: relative;
+            top: 60px;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.images{
+  @include responsive(mobilni){
+    max-width: 400px;
+    margin:300px 0 50px;
+
+    }
+    @include responsive(tablet){
+      max-width: 100%;
+      margin:300px 0 50px;
+  
+      }
+  max-width: 1600px;
+  margin: 300px auto 200px;
+  .row{
+    @include responsive(tablet){
+      max-width: 100%;
+      margin: auto;
+  
+      }
+    img{
+      max-width: 500px;
+      max-height: 360px;
+      margin-bottom: 50px;
+      margin-left: 20px;
+      @include responsive(tablet){
+        max-width: 100%;
+          margin: 10px auto;
+        }
+    }
+    }
+}
+
+.ponuda{
+  margin-bottom: 100px;
+  h2{
+    text-align: center;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  button{
+    @include dugme;
   }
 }
