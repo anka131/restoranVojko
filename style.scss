@@ -9,9 +9,9 @@
   margin: 30% auto 100px;
   @include flex;
   @include responsive(mobilni) {
-    margin: 120% auto;
+    margin-top: 120% !important;
     max-width: 100%;
-    text-align: left;
+    padding: 11%;
   }
   @include responsive(tablet) {
     margin: 50% auto;
@@ -29,6 +29,11 @@
       @include responsive(tablet) {
         max-width: 100%;
       }
+      @include responsive(laptop) {
+        max-width: 100%;
+
+      }
+
 
     .slike {
         @include flex;
@@ -46,6 +51,21 @@
             position: relative;
             left: -20px;
           }
+          @include responsive(laptop) {
+            margin: 0;
+            max-width: 100%;
+            position: relative;
+            left: -20px;
+          }
+          .slika1{
+            @include responsive(mobilni) {
+              margin: 0;
+              max-width: 100%;
+              position: relative;
+              left: -25px;
+            }
+
+          }
     
         .slika2 {
           position: relative;
@@ -56,11 +76,16 @@
             margin-bottom: 150px;
             max-width: 100%;
             position: relative;
-            left: 0;
+           left: -25px;
           }
           @include responsive(tablet) {
             margin-bottom: 150px;
             max-width: 100%;
+          }
+          @include responsive(laptop) {
+            margin-left: -12px;
+            max-width: 100%;
+
           }
         }
       }
@@ -68,10 +93,6 @@
         position: relative;
         right: 40px;
         margin-bottom: 20px;
-        @include responsive(mobilni) {
-            font-size: 12px;
-            text-align: left;
-          }
         h2 {
           @include responsive(mobilni) {
             text-align: center;
@@ -144,6 +165,10 @@
         max-width: 100%;
       flex-direction: column;
       align-items: baseline;
+    }
+    @include responsive(laptop) {
+      max-width: 100%;
+      padding-right: 0
     }
 
     article {
@@ -235,36 +260,33 @@
 // suha-marina & restoran styles
 
 .about{
-  margin: 800px auto 100px;
+  margin: 30% auto 10%;
   max-width: 80%;
   @include responsive(mobilni){
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 100% auto;
+    max-width: 100% !important;
+    margin-top: 90% !important;
+
     }
   @include responsive(tablet) {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 90% auto;
+    margin-top: 60%;
   }
   @include responsive (laptop){
     margin: 30% auto;
   }
   
-  article{
+   article{
     position: relative;
     @include responsive(mobilni){
       max-width: 100%;
-
     }
     @include responsive(tablet){
-      max-width: 70%;
+      max-width: 100%;
       display: flex;
       flex-direction: column !important;
-      margin-left: 20px;
+      padding: 5%;
     }
     @include responsive(laptop){
       max-width: 95%;
@@ -273,8 +295,9 @@
       position: absolute;
       left: 50%;
       @include responsive(tablet) {
-        max-width: 100%;
+        width: 100% ;
         margin: 0 !important;
+        padding: 5%;
         position: relative;
         left: 0;
       }
@@ -298,7 +321,7 @@
           padding-bottom: 70px;
         }
          @include responsive(tablet){
-         min-width: 100%;
+         max-width: 100%;
         }
         @include responsive(laptop){
           width: 70%;
@@ -318,6 +341,7 @@
       }
       @include responsive(mobilni){
         padding-left:0px;
+        max-width: 100%;
 
       }
 
@@ -338,19 +362,24 @@
     }
 
     &:last-of-type{
-      @include responsive(laptop){
-        display: flex;
 
-      }
       @include responsive(tablet) {
-        max-width: 90%;
+        max-width: 100%;
+        margin-top: 0;
+        padding: 5%;
        
       }
       @include responsive(mobilni){
-        max-width: 400px;
+        max-width: 100%;
         margin: 0;
         display: flex;
         flex-direction: column;
+        position: relative;
+        left: -1%;
+        }
+        @include responsive(laptop){
+          display: flex;
+  
         }
 
       margin-top: 90px;
@@ -368,41 +397,40 @@
           padding: 0 !important;
           }
           @include responsive(laptop){
-            width: 55%;
-            padding-left:120px;
+            width: 45%;
 
           }
       }
       display: flex;
       flex-direction: row-reverse;
       .slike{
-        @include responsive(tablet) {
-          max-width: 100%;
-          display:  flex;
-          margin-top: 20px;
-        }
+
         @include responsive(mobilni){
           display: flex;
           flex-direction: column;
           margin-top: -40%;
         }
+        @include responsive(tablet) {
+          max-width: 100%;
+          display:  flex;
+          padding: 2%;
+        }
         @include responsive(laptop){
-          display: flex;
-          flex-direction: row-reverse;
-          max-width: 40%;
+          max-width: 100%;
+          margin-left: 5%;
 
         }
 
         img{
           @include responsive(laptop){
-            max-width: 250px; 
+            max-width: 100%; 
             &:last-of-type{
               position: relative;
               top: 60px;
             }
            }
           @include responsive(mobilni){
-            margin-left: -10px;
+            margin-left: 10px;
           }
           max-width: 350px; 
           margin-left: 8px;
@@ -546,7 +574,16 @@
 .olives{
   margin: 30% auto 10%;
   max-width: 80%;
-
+  @include responsive(mobilni)
+{
+  max-width: 100%;
+  margin: 100% auto;
+}
+@include responsive(tablet)
+{
+  max-width: 100%;
+  margin: 60% auto;
+}
   p{
     font-size: 22px;
     font-family: $fontFamily;
@@ -556,12 +593,26 @@
   }
   .container{
     display: flex;
+    @include responsive(mobilni)
+    {
+      max-width: 100%;
+      display: block;
+    }
     div{
       max-width: 32%;
       margin: 15px;
+      @include responsive(mobilni)
+      {
+        max-width: 100%;
+      }
       img{
         max-width: 100%;
         margin: 10px;
+        @include responsive(mobilni)
+        {
+          max-width: 100%;
+        }
+
       }
     }
   }
@@ -576,9 +627,20 @@
   a{
     color: $headers !important;
     font-size: 28px;
-    font-family: $fontSecon;
+    font-family: $fontSecond;
     }
-
+    @include responsive(mobilni)
+    {
+      max-width: 100%;
+      margin-top: 170%;
+      margin-left: 10%;
+    }
+    @include responsive(tablet)
+    {
+      max-width: 100%;
+      margin-top: 100%;
+      margin-left: 10%;
+    }
   cursor: pointer;
   padding: 10px 20px;
   display: flex;
@@ -598,32 +660,73 @@
   margin:80px  auto ;
   display: flex;
   justify-content: space-between;
-  .content{
-    padding-right: 15%;
-    p{
-      max-width: 75%;
-      margin: 40px 0;
-      font-family: $fontFamily;
-      font-size: 20px;
+  @include responsive(mobilni)
+  {
+    max-width: 100%;
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+  @include responsive(tablet)
+  {
+    max-width: 100%;
+    margin-left: 10px;
+  }
+  .row{
+    @include responsive(mobilni)
+    {
+      max-width: 100%;
     }
-    h4{
-      max-width: 75%;
-      color: $headers;
-      font-size: 28px;
-      font-weight: 600;
-      font-family: $fontFamily;
+    @include responsive(tablet)
+    {
+      max-width: 100%;
     }
-    img{
-      max-width: 80%;
+    .content{
+      padding-right: 15%;
+      @include responsive(tablet)
+      {
+        max-width: 50%;
+        padding: 0;
+        margin-left: 20px;
+      }
+      p{
+        max-width: 75%;
+        margin: 40px 0;
+        font-family: $fontFamily;
+        font-size: 20px;
+      }
+      h4{
+        max-width: 75%;
+        color: $headers;
+        font-size: 28px;
+        font-weight: 600;
+        font-family: $fontFamily;
+      }
+      img{
+        max-width: 80%;
+      }
+    }
+    .blog{
+      padding-left: 15%;
+      @include responsive(mobilni)
+      {
+       max-width: 85%;
+       padding: 0;
+       margin-top: 20%;
+       margin-left: -5%;
+      }
+      @include responsive(tablet)
+      {
+        max-width: 50%;
+        padding: 0;
+        margin-right: 10px;
+      }
+      hr{
+        border: 1px solid $headers;
+        opacity: 0.5;
+      }
     }
   }
-  .blog{
-    padding-left: 15%;
-    hr{
-      border: 1px solid $headers;
-      opacity: 0.5;
-    }
-  }
+ 
 
 }
 
@@ -633,6 +736,18 @@
   margin-left: 9%;
   display: flex;
   justify-content: space-between;
+  @include responsive(mobilni)
+  {
+    max-width: 100%;
+    margin-left: -2%;
+    margin-top: -10%;
+  }
+  @include responsive(tablet)
+  {
+    max-width: 50%;
+    margin-left: -2%;
+    margin-top: -10%;
+  }
   
   button {
 

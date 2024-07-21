@@ -280,9 +280,9 @@ footer .container .forma a {
 }
 @media (max-width: 430px) {
   .welcome {
-    margin: 120% auto;
+    margin-top: 120% !important;
     max-width: 100%;
-    text-align: left;
+    padding: 11%;
   }
 }
 @media (max-width: 868px) {
@@ -304,6 +304,11 @@ footer .container .forma a {
   }
 }
 @media (max-width: 868px) {
+  .welcome .row {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1020px) and (max-width: 1530px) {
   .welcome .row {
     max-width: 100%;
   }
@@ -332,6 +337,22 @@ footer .container .forma a {
     left: -20px;
   }
 }
+@media screen and (min-width: 1020px) and (max-width: 1530px) {
+  .welcome .row .slike {
+    margin: 0;
+    max-width: 100%;
+    position: relative;
+    left: -20px;
+  }
+}
+@media (max-width: 430px) {
+  .welcome .row .slike .slika1 {
+    margin: 0;
+    max-width: 100%;
+    position: relative;
+    left: -25px;
+  }
+}
 .welcome .row .slike .slika2 {
   position: relative;
   left: 20px;
@@ -342,7 +363,7 @@ footer .container .forma a {
     margin-bottom: 150px;
     max-width: 100%;
     position: relative;
-    left: 0;
+    left: -25px;
   }
 }
 @media (max-width: 868px) {
@@ -351,16 +372,16 @@ footer .container .forma a {
     max-width: 100%;
   }
 }
+@media screen and (min-width: 1020px) and (max-width: 1530px) {
+  .welcome .row .slike .slika2 {
+    margin-left: -12px;
+    max-width: 100%;
+  }
+}
 .welcome .row .txt {
   position: relative;
   right: 40px;
   margin-bottom: 20px;
-}
-@media (max-width: 430px) {
-  .welcome .row .txt {
-    font-size: 12px;
-    text-align: left;
-  }
 }
 @media (max-width: 430px) {
   .welcome .row .txt h2 {
@@ -456,6 +477,12 @@ footer .container .forma a {
     align-items: baseline;
   }
 }
+@media screen and (min-width: 1020px) and (max-width: 1530px) {
+  .blog .row {
+    max-width: 100%;
+    padding-right: 0;
+  }
+}
 .blog .row article {
   padding: 50px 0;
 }
@@ -548,21 +575,24 @@ footer .container .forma a {
     margin-top: 80px;
   }
 }
+.blog div .postovi {
+  padding: 10px 50px;
+  margin: 0px 50px;
+  background-color: rgb(10, 30, 85);
+  color: white;
+}
 .blog h2 {
   text-align: center;
 }
 
 .about {
-  margin: 800px auto 100px;
+  margin: 30% auto 10%;
   max-width: 80%;
 }
 @media (max-width: 430px) {
   .about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 100% auto;
+    max-width: 100% !important;
+    margin-top: 90% !important;
   }
 }
 @media (max-width: 868px) {
@@ -570,7 +600,7 @@ footer .container .forma a {
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 90% auto;
+    margin-top: 60%;
   }
 }
 @media screen and (min-width: 1020px) and (max-width: 1530px) {
@@ -588,10 +618,10 @@ footer .container .forma a {
 }
 @media (max-width: 868px) {
   .about article {
-    max-width: 70%;
+    max-width: 100%;
     display: flex;
     flex-direction: column !important;
-    margin-left: 20px;
+    padding: 5%;
   }
 }
 @media screen and (min-width: 1020px) and (max-width: 1530px) {
@@ -605,8 +635,9 @@ footer .container .forma a {
 }
 @media (max-width: 868px) {
   .about article .slika {
-    max-width: 100%;
+    width: 100%;
     margin: 0 !important;
+    padding: 5%;
     position: relative;
     left: 0;
   }
@@ -636,7 +667,7 @@ footer .container .forma a {
 }
 @media (max-width: 868px) {
   .about article .slika img {
-    min-width: 100%;
+    max-width: 100%;
   }
 }
 @media screen and (min-width: 1020px) and (max-width: 1530px) {
@@ -662,6 +693,7 @@ footer .container .forma a {
 @media (max-width: 430px) {
   .about article .text {
     padding-left: 0px;
+    max-width: 100%;
   }
 }
 .about article .text p {
@@ -684,22 +716,26 @@ footer .container .forma a {
   display: flex;
   flex-direction: row-reverse;
 }
-@media screen and (min-width: 1020px) and (max-width: 1530px) {
-  .about article:last-of-type {
-    display: flex;
-  }
-}
 @media (max-width: 868px) {
   .about article:last-of-type {
-    max-width: 90%;
+    max-width: 100%;
+    margin-top: 0;
+    padding: 5%;
   }
 }
 @media (max-width: 430px) {
   .about article:last-of-type {
-    max-width: 400px;
+    max-width: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
+    position: relative;
+    left: -1%;
+  }
+}
+@media screen and (min-width: 1020px) and (max-width: 1530px) {
+  .about article:last-of-type {
+    display: flex;
   }
 }
 .about article:last-of-type .text {
@@ -721,15 +757,7 @@ footer .container .forma a {
 }
 @media screen and (min-width: 1020px) and (max-width: 1530px) {
   .about article:last-of-type .text {
-    width: 55%;
-    padding-left: 120px;
-  }
-}
-@media (max-width: 868px) {
-  .about article:last-of-type .slike {
-    max-width: 100%;
-    display: flex;
-    margin-top: 20px;
+    width: 45%;
   }
 }
 @media (max-width: 430px) {
@@ -739,11 +767,17 @@ footer .container .forma a {
     margin-top: -40%;
   }
 }
+@media (max-width: 868px) {
+  .about article:last-of-type .slike {
+    max-width: 100%;
+    display: flex;
+    padding: 2%;
+  }
+}
 @media screen and (min-width: 1020px) and (max-width: 1530px) {
   .about article:last-of-type .slike {
-    display: flex;
-    flex-direction: row-reverse;
-    max-width: 40%;
+    max-width: 100%;
+    margin-left: 5%;
   }
 }
 .about article:last-of-type .slike img {
@@ -752,7 +786,7 @@ footer .container .forma a {
 }
 @media screen and (min-width: 1020px) and (max-width: 1530px) {
   .about article:last-of-type .slike img {
-    max-width: 250px;
+    max-width: 100%;
   }
   .about article:last-of-type .slike img:last-of-type {
     position: relative;
@@ -761,7 +795,7 @@ footer .container .forma a {
 }
 @media (max-width: 430px) {
   .about article:last-of-type .slike img {
-    margin-left: -10px;
+    margin-left: 10px;
   }
 }
 .about article:last-of-type .slike img:last-of-type {
@@ -911,6 +945,18 @@ footer .container .forma a {
   margin: 30% auto 10%;
   max-width: 80%;
 }
+@media (max-width: 430px) {
+  .olives {
+    max-width: 100%;
+    margin: 100% auto;
+  }
+}
+@media (max-width: 868px) {
+  .olives {
+    max-width: 100%;
+    margin: 60% auto;
+  }
+}
 .olives p {
   font-size: 22px;
   font-family: "Monsterrat", sans-serif;
@@ -921,13 +967,29 @@ footer .container .forma a {
 .olives .container {
   display: flex;
 }
+@media (max-width: 430px) {
+  .olives .container {
+    max-width: 100%;
+    display: block;
+  }
+}
 .olives .container div {
   max-width: 32%;
   margin: 15px;
 }
+@media (max-width: 430px) {
+  .olives .container div {
+    max-width: 100%;
+  }
+}
 .olives .container div img {
   max-width: 100%;
   margin: 10px;
+}
+@media (max-width: 430px) {
+  .olives .container div img {
+    max-width: 100%;
+  }
 }
 
 .blog-button {
@@ -945,6 +1007,20 @@ footer .container .forma a {
   font-size: 28px;
   font-family: "Great Vibes", cursive;
 }
+@media (max-width: 430px) {
+  .blog-button {
+    max-width: 100%;
+    margin-top: 170%;
+    margin-left: 10%;
+  }
+}
+@media (max-width: 868px) {
+  .blog-button {
+    max-width: 100%;
+    margin-top: 100%;
+    margin-left: 10%;
+  }
+}
 .blog-button .left-arrows {
   color: rgb(200, 48, 47);
   margin-right: 5px;
@@ -958,29 +1034,74 @@ footer .container .forma a {
   display: flex;
   justify-content: space-between;
 }
-.post .content {
+@media (max-width: 430px) {
+  .post {
+    max-width: 100%;
+    margin-top: 10%;
+    margin-left: 10%;
+  }
+}
+@media (max-width: 868px) {
+  .post {
+    max-width: 100%;
+    margin-left: 10px;
+  }
+}
+@media (max-width: 430px) {
+  .post .row {
+    max-width: 100%;
+  }
+}
+@media (max-width: 868px) {
+  .post .row {
+    max-width: 100%;
+  }
+}
+.post .row .content {
   padding-right: 15%;
 }
-.post .content p {
+@media (max-width: 868px) {
+  .post .row .content {
+    max-width: 50%;
+    padding: 0;
+    margin-left: 20px;
+  }
+}
+.post .row .content p {
   max-width: 75%;
   margin: 40px 0;
   font-family: "Monsterrat", sans-serif;
   font-size: 20px;
 }
-.post .content h4 {
+.post .row .content h4 {
   max-width: 75%;
   color: rgb(10, 30, 85);
   font-size: 28px;
   font-weight: 600;
   font-family: "Monsterrat", sans-serif;
 }
-.post .content img {
+.post .row .content img {
   max-width: 80%;
 }
-.post .blog {
+.post .row .blog {
   padding-left: 15%;
 }
-.post .blog hr {
+@media (max-width: 430px) {
+  .post .row .blog {
+    max-width: 85%;
+    padding: 0;
+    margin-top: 20%;
+    margin-left: -5%;
+  }
+}
+@media (max-width: 868px) {
+  .post .row .blog {
+    max-width: 50%;
+    padding: 0;
+    margin-right: 10px;
+  }
+}
+.post .row .blog hr {
   border: 1px solid rgb(10, 30, 85);
   opacity: 0.5;
 }
@@ -990,6 +1111,20 @@ footer .container .forma a {
   margin-left: 9%;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 430px) {
+  .buttons {
+    max-width: 100%;
+    margin-left: -2%;
+    margin-top: -10%;
+  }
+}
+@media (max-width: 868px) {
+  .buttons {
+    max-width: 50%;
+    margin-left: -2%;
+    margin-top: -10%;
+  }
 }
 .buttons button {
   background-color: white;
