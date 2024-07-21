@@ -1,100 +1,26 @@
-@import "globals.scss";
-@import "vars.scss";
-@import "mixins.scss";
+@import "globals";
+@import "vars";
+@import "mixins";
 
-header {
-  .banner-wrapper {
-    position: relative;
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-        @include responsive(mobilni) {
-              max-width: 100%;                 
-              height: 800px;
-            }
-            @include responsive(tablet) {
-              width: 100%;
-              height: 800px;
-            }
-    }
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-        z-index: 1;
-        opacity: 74%;
-    }
-}
-  font-family: $fontFamily;
-  font-size: 18px;
-  nav {
-    position: relative;
-    top: -1050px;
-    @include responsive(mobilni) {
-      top: -810px;
-      z-index: 9999;
-    }
-    @include responsive(tablet) {
-      top: -810px;
-      z-index: 9999;
-    }
-    .container {
-      z-index: 999999;
-      margin-top: 15px;
-      img {
-        width: 126px;
-        height: 78px;
-        opacity: 100%;
-      }
-    }
-  }
-}
 
-.hero {
-  z-index: 1;
-  position: relative;
-  top: -720px;
-  @include flex;
-  @include responsive(mobilni) {
-    top: -720px;
-    z-index: 9999;
-  }
-  .text-container {
-    max-width: 1010px;
-    @include flex;
-    text-align: center;
-    color: $white;
-    h1 {
-      font-family: $fontSecond;
-      font-size: 89px;
-      @include responsive(mobilni) {
-        font-size: 60px;
-      }
-    }
-    p {
-      font-size: 22px;
-      font-family: $fontFamily;
-    }
-  }
-}
-
+// Pocetna styles
 .welcome {
   max-width: 1600px;
-  margin: -70px auto;
+  margin: 30% auto 100px;
   @include flex;
   @include responsive(mobilni) {
+    margin: 120% auto;
     max-width: 100%;
     text-align: left;
   }
   @include responsive(tablet) {
+    margin: 50% auto;
     max-width: 100%;
     display: flex;
     flex-direction: column;
+  }
+  @include responsive (laptop){
+    margin: 30% auto;
   }
   .row{
     @include responsive(mobilni) {
@@ -145,7 +71,6 @@ header {
         @include responsive(mobilni) {
             font-size: 12px;
             text-align: left;
-            // // l
           }
         h2 {
           @include responsive(mobilni) {
@@ -198,6 +123,7 @@ header {
  
 }
 
+// Blog & Pocetna styles
 .blog {
   @include flex;
   @include responsive(tablet) {
@@ -219,7 +145,9 @@ header {
       flex-direction: column;
       align-items: baseline;
     }
+
     article {
+      padding: 50px 0;
       @include responsive(mobilni) {
         max-width: 100%;
       }
@@ -228,6 +156,11 @@ header {
         flex-direction: column;
         align-items: center;
         margin-bottom: 30px;
+      }
+      @include responsive (laptop){
+        padding: 0;
+        margin: 70px;
+        width: 33%;
       }
       img {
         width: 496px;
@@ -265,14 +198,17 @@ header {
         position: relative;
         left: 110px;
         @include dugme;
+        &:hover{
+          background-color: $date;
+          border-color: $date;
+        }
       }
     }
   }
   div{
     margin-top: 55px;
     padding: 10px 15px;
-    .sec {
-
+    .sec{
         @include responsive(mobilni) {
           margin-top: 80px;
           margin-left: 150px;
@@ -283,6 +219,9 @@ header {
         @include dugme;
     
       }
+      .postovi{
+        @include dugme;
+      }
   }
   
   h2 {
@@ -292,180 +231,146 @@ header {
   margin: 332px auto;
 }
 
-footer {
-  background-image: url("img/footer-bg.png");
-  padding: 50px 0;
-  @include responsive(mobilni) {
-    max-width: 100%;
-  }
-  @include responsive(tablet) {
-    min-width: 100%;
-  }
-  h2 {
-    color: $white !important;
-    text-align: center;
-    margin-top: 50px !important;
-  }
-  .container {
-    max-width: 1600px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .text {
-      img {
-        width: 280px;
-        height: 165px;
-      }
-      p {
-        font-family: $fontFamily;
-        color: $white;
-        &:first-of-type {
-          margin-top: 40px;
-        }
-      }
-    }
-    .forma {
-      form {
-        font-family: $fontFamily;
-        font-size: 14px;
-        label {
-          color: $white;
-        }
-        input, textarea {
-          background-color: #fff;
-          opacity: 58%;
-          border-radius: 0 !important;
-        }
-      }
-      a {
-        @include dugme;
-        background-color: $date;
-        margin-top: 38px;
-        text-align: center;
-        position: relative;
-        left: 125px;
-        border-radius: 0 !important;
-      }
-    }
-  }
-}
 
-// Restoran page
+// suha-marina & restoran styles
 
 .about{
-  margin: auto;
-  max-width: 1600px;
+  margin: 800px auto 100px;
+  max-width: 80%;
   @include responsive(mobilni){
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 400px;
+    margin: 100% auto;
     }
   @include responsive(tablet) {
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 90% auto;
+  }
+  @include responsive (laptop){
+    margin: 30% auto;
   }
   
   article{
+    position: relative;
     @include responsive(mobilni){
       max-width: 100%;
-      display: flex;
-      flex-direction: column-reverse;
+
     }
     @include responsive(tablet){
-      max-width: 100%;
+      max-width: 70%;
       display: flex;
-      flex-direction: column-reverse ;
+      flex-direction: column !important;
+      margin-left: 20px;
+    }
+    @include responsive(laptop){
+      max-width: 95%;
     }
     .slika{
+      position: absolute;
+      left: 50%;
       @include responsive(tablet) {
         max-width: 100%;
+        margin: 0 !important;
         position: relative;
-        top: 120px;
-        left: -35px;
+        left: 0;
       }
       @include responsive(mobilni){
         max-width: 100%;
         margin: 0 !important;
         position: relative;
-        top: 0;
-        left: -6px;
+        left: 0;
+      }
+      @include responsive(laptop){
+        width: 60%;
+        height: auto;
+        display: block;
+        margin-top: 120px;
+
       }
       img{
         @include responsive(mobilni){
           max-width: 100%;
           margin: 0 !important;
-          position: relative;
-          top: 220px;
-          right: -3px;
+          padding-bottom: 70px;
         }
          @include responsive(tablet){
-          max-width: 100%;
+         min-width: 100%;
+        }
+        @include responsive(laptop){
+          width: 70%;
+          height: auto;
+          display: block;
+
         }
       }
     }
     
     .text{
+      @include responsive(laptop){
+        padding:0 80px;
+      }
+      @include responsive(tablet){
+        width: 100%;
+      }
+      @include responsive(mobilni){
+        padding-left:0px;
+
+      }
+
       p{
         font-family: $fontFamily;
         font-size: 15px;
         @include responsive (mobilni) {
           margin-top: -20px;
+          margin-left: 15px;
         }
         @include responsive (tablet) {
           margin-left: 15px;
         }
+
       }
-      width: 730px;
-      height: 250px;
       margin-top: 30px;
-      h2{
-        @include responsive (mobilni) {
-          position: relative;
-          top: -350px;
-        }
-        @include responsive (tablet) {
-          position:relative;
-          top: -350px;
-        }
-      }
+
     }
 
     &:last-of-type{
-      @include responsive(tablet) {
-        max-width: 100%;
+      @include responsive(laptop){
         display: flex;
-        flex-direction: column-reverse;
-        position: relative;
-        left: 0px;
+
+      }
+      @include responsive(tablet) {
+        max-width: 90%;
+       
       }
       @include responsive(mobilni){
         max-width: 400px;
         margin: 0;
-        position: relative;
-        left: 2px;
-        top: 300px;
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         }
-      position: relative;
-      left: -130px;
+
       margin-top: 90px;
 
       .text{
         margin-top: 150px;
         margin-left: -30px;
         @include responsive(tablet) {
-          max-width: 100%;
-          position: relative;
-          top: 20px;
+          width: 100%;
+          margin-left: 20px;
         }
         @include responsive(mobilni){
           width: 100%;
            margin: 0 auto 200px;
-           position: relative;
-          top: 100px;
+          padding: 0 !important;
+          }
+          @include responsive(laptop){
+            width: 55%;
+            padding-left:120px;
+
           }
       }
       display: flex;
@@ -479,9 +384,23 @@ footer {
         @include responsive(mobilni){
           display: flex;
           flex-direction: column;
+          margin-top: -40%;
         }
-        img{
+        @include responsive(laptop){
+          display: flex;
+          flex-direction: row-reverse;
+          max-width: 40%;
 
+        }
+
+        img{
+          @include responsive(laptop){
+            max-width: 250px; 
+            &:last-of-type{
+              position: relative;
+              top: 60px;
+            }
+           }
           @include responsive(mobilni){
             margin-left: -10px;
           }
@@ -509,9 +428,15 @@ footer {
       margin:300px 0 50px;
   
       }
-  max-width: 1600px;
-  margin: 300px auto 200px;
   .row{
+    max-width: 90%;
+    margin:200px auto 100px;
+    display: flex;
+    justify-content: center;
+    @include responsive(laptop){
+      margin-left: 150px;
+
+     }
     @include responsive(tablet){
       max-width: 100%;
       margin: auto;
@@ -542,4 +467,202 @@ footer {
   button{
     @include dugme;
   }
+}
+
+
+// Suha Marina styles
+.usluge{
+  @include responsive(mobilni){
+    max-width: 100%;
+    margin-top: 400px;
+  }
+  @include responsive(tablet){
+    max-width: 100%;
+  }
+  max-width: 1920px;
+  background-color: $headers;
+  margin-top: 200px;
+  h2{
+    color: $white !important;
+    text-align: center;
+    padding-top: 93px;
+  }
+  article{
+    @include responsive(mobilni){
+      max-width: 100%;
+    }
+    @include responsive(mobilni){
+      max-width: 100%;
+      margin: 10px auto;
+    }
+    max-width: 1600px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .card{
+      margin-left: 50px;
+      padding: 0;
+      border-radius: 0;
+      @include responsive(mobilni){
+        max-width: 100%;
+        margin-left: 0;
+        margin-bottom: 50px;
+      }
+      @include responsive(tablet){
+        max-width: 100%;
+        margin-left: 10 px;
+        margin-bottom: 50px;
+      }
+      .card-body{
+        padding: 28px 36px 39px; 
+        text-align: center;
+        font-family: $fontFamily;
+        color: $headers;
+        h5{
+          font-size: 20px;
+          font-weight: 600;
+          padding-bottom: 14px;
+        }
+        p{
+          font-style: 18px;
+        }
+      }
+ 
+      img{
+        height: 320px;
+      }
+
+    }
+    &:last-of-type{
+      padding-bottom: 100px;
+    }
+  }
+
+}
+
+// Maslinovo ulje page styles
+.olives{
+  margin: 30% auto 10%;
+  max-width: 80%;
+
+  p{
+    font-size: 22px;
+    font-family: $fontFamily;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  .container{
+    display: flex;
+    div{
+      max-width: 32%;
+      margin: 15px;
+      img{
+        max-width: 100%;
+        margin: 10px;
+      }
+    }
+  }
+  
+
+}
+
+.blog-button {
+  margin: 35% 9% 0;
+  background-color: white;
+  border: none;
+  a{
+    color: $headers !important;
+    font-size: 28px;
+    font-family: $fontSecon;
+    }
+
+  cursor: pointer;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  .left-arrows {
+    color: $date;
+    margin-right: 5px;
+    font-size: 35px;
+    font-weight: bold;
+}
+}
+
+.post{
+ 
+  max-width: 80%;
+  margin:80px  auto ;
+  display: flex;
+  justify-content: space-between;
+  .content{
+    padding-right: 15%;
+    p{
+      max-width: 75%;
+      margin: 40px 0;
+      font-family: $fontFamily;
+      font-size: 20px;
+    }
+    h4{
+      max-width: 75%;
+      color: $headers;
+      font-size: 28px;
+      font-weight: 600;
+      font-family: $fontFamily;
+    }
+    img{
+      max-width: 80%;
+    }
+  }
+  .blog{
+    padding-left: 15%;
+    hr{
+      border: 1px solid $headers;
+      opacity: 0.5;
+    }
+  }
+
+}
+
+.buttons{
+  // @include flex;
+  max-width: 30%;
+  margin-left: 9%;
+  display: flex;
+  justify-content: space-between;
+  
+  button {
+
+      background-color: white;
+      border: none;
+      color: $headers;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      font-family: $fontFamily;
+    
+    .back-button{
+      position: relative;
+       right: 20%;
+    }
+    .arrows {
+      color: #ff0000;
+      font-size: 35px;
+      position: relative;
+      right: 12%;
+      top: 10%;
+      ion-icon {
+        &:first-of-type{
+          position: relative;
+          left: 40%;
+        }
+      }
+  }
+  }
+
 }
